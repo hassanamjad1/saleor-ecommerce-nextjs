@@ -1,5 +1,4 @@
-import '../styles/globals.css'
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import 'tailwindcss/tailwind.css'
 
 const client = new ApolloClient({
@@ -10,7 +9,12 @@ const client = new ApolloClient({
 
 
 function MyApp({ Component, pageProps }) {
-  return (0)    
+  return (
+    <ApolloProvider client={client} >  
+      <Component {...pageProps} />
+    </ApolloProvider>
+    
+  )    
 }
 
 export default MyApp
