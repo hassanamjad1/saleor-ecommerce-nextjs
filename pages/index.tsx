@@ -8,7 +8,8 @@ import { ProductList } from '../components/ProductList'
 
 export default function Home() {
   return (
-    <div className = {styles.container}> 
+    <div className = "min-h-screen bg-gray-200"> 
+      
       <ProductList />
     </div>
 
