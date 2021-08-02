@@ -4,7 +4,7 @@ import { useLatestProductsQuery } from "../generated/graphql"
 
 const  LatestProducts = /* GraphQL */ `
 query LatestProducts {
-    products(first: 10, channel: "default-channel") {
+    products(first: 20, channel: "default-channel") {
       edges {
         node {
           id
@@ -30,7 +30,7 @@ export function ProductList() {
         const latestProducts = data.products.edges || [];
 
         return (
-            <ul className="grid grid-cols-4 gap-4" >
+            <ul className="grid grid-cols-4 gap-7" >
                 {latestProducts.map(({ node: { name,thumbnail,description }}) =>
                     <li className = "bg-white">
                         

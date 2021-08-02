@@ -11869,7 +11869,7 @@ export type LatestProductsQuery = (
 
 export const LatestProductsDocument = gql`
     query LatestProducts {
-  products(first: 10, channel: "default-channel") {
+  products(first: 20, channel: "default-channel") {
     edges {
       node {
         id
